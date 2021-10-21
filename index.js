@@ -1,10 +1,16 @@
-let argumento = process.argv[2]; 
+let argumento = process.argv[3]
+let usuario = process.argv[4]
+let contraseña =process.argv[5]
+let saldo= process.argv[6]
+let usuario2= process.argv[7]
 
-switch (argumento) 
+let funciones = require("./funciones.js");
+
+switch (argumento,usuario,contraseña,saldo,usuario2) 
 {
-    case "consultar": //pasando el usuario muestra nombre y saldo:
+    case "consultar": console.log(funciones.consultarUser(usuario,contraseña)) 
         break
-    case "transferir": //transfiere saldo de un usuario a otro
+    case "transferir": funciones.transferirSaldo(usuario,contraseña,saldo,usuario2)
     break
     case "agregarSaldo": //cargar salgo en la cuenta del usuario
     break
