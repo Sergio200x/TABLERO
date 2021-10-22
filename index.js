@@ -10,7 +10,7 @@ switch (argumento,usuario,contraseña,saldo,usuario2)
 {
     case "consultar": console.log(funciones.consultarUser(usuario,contraseña)) 
         break
-    case "transferir": funciones.transferirSaldo(usuario,contraseña,saldo,usuario2)
+    case "transferir": funciones.transferirSaldo(usuario.tostring(),contraseña.tostring(),saldo,usuario2.tostring())
     break
     case "agregarSaldo": //cargar salgo en la cuenta del usuario
     break

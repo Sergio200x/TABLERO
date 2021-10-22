@@ -42,7 +42,7 @@ function transferirSaldo(usuario1,password,saldoAtransferir,usuario2)
                 {
                     buscarUsuario1[0].saldo = buscarUsuario1[0].saldo-saldoAtransferir 
                     buscarUsuario2[0].saldo= buscarUsuario2[0].saldo+saldoAtransferir
-                    console.log("Se ha descontado $"+saldoAtransferir+" de su cuenta y se a transferido a "+usuario1
+                    console.log("Se ha descontado $"+saldoAtransferir+" de su cuenta y se a transferido a "+usuario2
                     +" ,su saldo actual es $"+buscarUsuario1[0].saldo)
                     
                 }
@@ -64,5 +64,5 @@ function transferirSaldo(usuario1,password,saldoAtransferir,usuario2)
 
 module.exports={consultarUser,validarUsuario,transferirSaldo}
 
-transferirSaldo(sergio200x, )
+transferirSaldo("sergio200x","seguridad",100,"sergio200x2")
 
