@@ -62,7 +62,21 @@ function transferirSaldo(usuario1,password,saldoAtransferir,usuario2)
     }   
 }
 
-module.exports={consultarUser,validarUsuario,transferirSaldo}
 
-transferirSaldo("sergio200x","seguridad",100,"sergio200x2")
+function agregarSaldo (usuario,password,saldoParaAgregar)
+{
+    if(validarUsuario(usuario,password)===usuario&&saldoParaAgregar>0)
+    {   
+        let buscarUsuario = consultarUser(usuario,password)
+        buscarUsuario.saldo = buscarUsuario.saldo + saldoParaAgregar
+        console.log ("Saldo acreditado exitosamente! su nuevo saldo es: $"+ buscarUsuario[0].saldo)
+    }
+    else
+    {
+        console.log("Usuario y/o contraseña invalidos")
+    }
+
+}
+
+module.exports={consultarUser,validarUsuario,transferirSaldo,agregarSaldo}
 
