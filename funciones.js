@@ -68,8 +68,9 @@ function agregarSaldo (usuario,password,saldoParaAgregar)
     if(validarUsuario(usuario,password)===usuario&&saldoParaAgregar>0)
     {   
         let buscarUsuario = consultarUser(usuario,password)
-        buscarUsuario.saldo = buscarUsuario.saldo + saldoParaAgregar
-        console.log ("Saldo acreditado exitosamente! su nuevo saldo es: $"+ buscarUsuario[0].saldo)
+        let saldoNuevo= buscarUsuario[0].saldo+=saldoParaAgregar
+        
+        console.log ("Saldo acreditado exitosamente! su nuevo saldo es: $"+ saldoNuevo)
     }
     else
     {
@@ -77,6 +78,7 @@ function agregarSaldo (usuario,password,saldoParaAgregar)
     }
 
 }
+
 
 module.exports={consultarUser,validarUsuario,transferirSaldo,agregarSaldo}
 
